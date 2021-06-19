@@ -1,0 +1,3 @@
+mixin tooltip(text, upperText,extraClass)
+  div(class=`tooltip ${extraClass}` .trimRight())
+    p.tooltip__text #{text} #[span.tooltip__up-text= upperText]
