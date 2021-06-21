@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/images/bg-mobile.png);
+  background-size: cover;
+  margin: 24px;
+  font-family: Raleway;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+.main-header {
+  background-color: #1d2c67;
+  border-radius: 10px 100px 0px 0px;
+  margin-top: 120px;
+}
+
+.logo {
+  margin: 40px 0px 30px 40px;
+}
+
+.icons-list {
+  display: flex;
+  padding: 0px 0px 40px 40px;
+  background-color: #1d2c67;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 16px;
+}
+.icons-list__item {
+  background-color: #0c122c;
+  height: 48px;
+  width: 48px;
+  margin-right: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.icons-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.available-storage {
+  position: relative;
+  background-color: #1d2c67;
+  border-radius: 10px;
+  color: #dddbff;
+  font-size: 0.85rem;
+  padding: 30px 30px 0px 30px;
+}
+.available-storage span {
+  font-weight: 700;
+}
+.available-storage__description {
+  padding-bottom: 15px;
+  text-align: center;
+}
+.available-storage__progress-bar {
+  position: relative;
+  background-color: rgba(12, 18, 44, 0.474);
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.available-storage__progress-bar::after {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 76%;
+  border-radius: 10px;
+  left: 3px;
+  top: 3px;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+}
+.available-storage__progress-bar::before {
+  content: "";
+  position: absolute;
+  left: calc(75% - 6px);
+  top: 5px;
+  z-index: 10;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+.available-storage__min-max {
+  display: flex;
+  justify-content: space-between;
+}
+
+.set-font-size-small {
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+
+.tooltip {
+  position: relative;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 65%;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+.tooltip__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.tooltip__up-text {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #848794;
+  text-transform: uppercase;
+  padding-left: 10px;
+}

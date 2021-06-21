@@ -1,0 +1,30 @@
+@use "../config/variables" as *;
+
+.tooltip{
+  position: relative;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 65%;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 10px;
+
+  &__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  &__up-text{
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: $Grayish-Blue;
+    text-transform: uppercase;
+    padding-left: 10px;
+  }
+}
