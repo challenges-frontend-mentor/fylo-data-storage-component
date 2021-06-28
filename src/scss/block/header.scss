@@ -1,5 +1,5 @@
 @use "../config/variables" as *;
-
+@use "../mixins/from" as *;
 .main-header{
   background-color: $Dark-Blue;
   border-radius: 10px 100px 0px 0px;
@@ -8,6 +8,10 @@
 
   // height: 200px;
   // width: 400px;
+
+  @include from($desktop){
+    margin-top: 0;
+  }
 }
 
 .logo{

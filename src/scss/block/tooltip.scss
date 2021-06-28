@@ -1,15 +1,44 @@
 @use "../config/variables" as *;
+@use "../mixins/from" as *;
+@use "../mixins/to" as *;
 
 .tooltip{
   position: relative;
   background-color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
   width: 65%;
   text-align: center;
   padding: 15px 15px;
   border-radius: 10px;
+  
+  @include to($desktop){
+    // top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+  }
+
+  @include from($desktop){
+    width: 40%;
+    // top: -110%;
+    top: -140px;
+    right: -287px;
+    border-bottom-right-radius: 0px;
+
+    &:before{
+      $border: 20px;
+      content: "";
+      position: absolute;
+      // width: 20px;
+      // height: 20px;
+      border-bottom: $border solid transparent;
+      border-right: $border solid white;
+      bottom: -$border;
+      right: 0;
+    }
+    
+  }
+
+
 
   &__text{
     display: flex;
